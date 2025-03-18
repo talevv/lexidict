@@ -69,7 +69,7 @@ example,"n","something to be imitated"
 LexiDict is based on **Open English WordNet**, which is licensed under the [Princeton WordNet License](https://wordnet.princeton.edu/license-and-commercial-use). This tool **does not modify** the word definitions but restructures them for easier use.
 
 ## License
-This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](https://github.com/talevv/lexidict/blob/master/LICENSE.md) file for details.
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
