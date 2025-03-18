@@ -13,6 +13,10 @@
   ],
   "author": "Tadeusz Lewandowski",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talevv/lexidict"
+  },
   "scripts": {
     "json": "node index.js --format json",
     "csv": "node index.js --format csv"
