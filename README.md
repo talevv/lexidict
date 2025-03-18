@@ -7,6 +7,10 @@
 - Provides a **dictionary-like structure** with word meanings and relationships.
 - Simple command-line interface for easy usage.
 
+## How It Works
+
+LexiDict automatically downloads the latest Open English WordNet XML data from https://en-word.net/ when you run the command. There's no need to manually download or manage the source files - just run the command and LexiDict handles the download, parsing, and conversion process for you. The tool caches downloaded data locally to improve performance on subsequent runs.
+
 ## Installation
 
 Install LexiDict globally using **npm**:
