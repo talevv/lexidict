@@ -1,10 +1,16 @@
 {
   "name": "lexidict",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert Open English WordNet data to JSON or CSV, creating a structured dictionary of words and meanings.",
   "main": "index.js",
   "bin": "index.js",
-  "keywords": ["wordnet", "converter", "json", "csv", "lexical data"],
+  "keywords": [
+    "wordnet",
+    "converter",
+    "json",
+    "csv",
+    "lexical data"
+  ],
   "author": "Tadeusz Lewandowski",
   "license": "MIT",
   "scripts": {
