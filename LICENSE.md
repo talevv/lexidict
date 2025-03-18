@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Tadeusz Lewandowski
+Copyright (c) 2025 XXX
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,3 +28,8 @@ The original WordNet dataset is licensed under the [Princeton WordNet License](h
 This library does not alter the content of the definitions but restructures the data format (from XML to JSON/CSV).  
 
 Princeton University holds copyright for the original WordNet dataset.
+
+**Open English WordNet Notice**
+This project uses data from Open English WordNet (https://github.com/globalwordnet/english-wordnet).
+Open English WordNet is distributed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+The data contains contributions from the Open English WordNet contributors.
