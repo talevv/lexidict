@@ -49,20 +49,34 @@ Displays all available commands and options.
 ### JSON Format Example
 ```json
 {
-  "word": "example",
-  "partOfSpeech": "n",
-  "definitions": [
-    "a representative form or pattern",
-    "something to be imitated"
-  ]
+  "w-cat": {
+    "meanings": [
+      {
+        "definition": "A small domesticated carnivorous mammal.",
+        "partOfSpeech": "n"
+      },
+      {
+        "definition": "To hoist an anchor to the cathead of a ship.",
+        "partOfSpeech": "v"
+      }
+    ]
+  },
+  "w-constructor": {
+    "meanings": [
+      {
+        "definition": "A person who builds something.",
+        "partOfSpeech": "n"
+      }
+    ]
+  }
 }
 ```
 
 ### CSV Format Example
 ```csv
-"word","partOfSpeech","meanings"
-example,"n","a representative form or pattern"
-example,"n","something to be imitated"
+word,meanings
+w-cat,"n: A small domesticated carnivorous mammal.; v: To hoist an anchor to the cathead of a ship."
+w-constructor,"n: A person who builds something."
 ```
 
 ## Data Source
