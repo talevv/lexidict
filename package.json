@@ -1,6 +1,6 @@
 {
   "name": "lexidict",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Convert Open English WordNet data to JSON or CSV, creating a structured dictionary of words and meanings.",
   "main": "index.js",
   "bin": "index.js",
