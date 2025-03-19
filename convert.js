@@ -32,10 +32,18 @@ const convertWordnet = (format) => {
     const partOfSpeech = entry.Lemma["@_partOfSpeech"];
     const senses = Array.isArray(entry.Sense) ? entry.Sense : [entry.Sense]; // Handle single vs multiple senses
 
-    wordnetJSON[word] = {
-      partOfSpeech,
-      meanings: senses.map((sense) => synsetMap[sense["@_synset"]] || "Definition not found."),
-    };
+    // Create id for the word to fix a problem with restrictions on object keys in JSON
+    const wordId = `w-${word.replace(/\s+/g, "_")}`;
+    // Ensure wordnetJSON[word] is initialized
+    if (!wordnetJSON[wordId]) {
+      wordnetJSON[wordId] = { meanings: [] };
+    }
+
+    // Add meanings as objects with definition and partOfSpeech
+    senses.forEach((sense) => {
+      const definition = synsetMap[sense["@_synset"]] || "Definition not found.";
+      wordnetJSON[wordId].meanings.push({ definition, partOfSpeech });
+    });
   });
 
   if (!fs.existsSync(OUTPUT_DIR)) {
@@ -51,8 +59,9 @@ const convertWordnet = (format) => {
     const OUTPUT_FILE = path.join(OUTPUT_DIR, "lexidict.csv");
     const csvData = Object.entries(wordnetJSON).map(([word, data]) => ({
       word,
-      partOfSpeech: data.partOfSpeech,
-      meanings: data.meanings.join("; "),
+      meanings: data.meanings
+        .map((meaning) => `${meaning.partOfSpeech}: ${meaning.definition}`)
+        .join("; "),
     }));
     const csv = parse(csvData);
     fs.writeFileSync(OUTPUT_FILE, csv);
